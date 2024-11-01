@@ -298,3 +298,51 @@ header {
     font-size: 0.8rem;
     color: #cccccc;
 }
+/* Styles pour le menu hamburger sur les petits écrans */
+@media (max-width: 768px) {
+    /* Cache la barre de navigation normale */
+    .navbar {
+        display: none;
+    }
+
+    /* Bouton hamburger */
+    .hamburger {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 10px 20px;
+        color: #004080;
+    }
+
+    /* Affichage du menu déroulant */
+    .navbar-mobile {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px; /* Ajustez pour éviter le chevauchement avec l'en-tête */
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-mobile li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-mobile a {
+        color: rgb(5, 49, 248);
+        font-weight: bold;
+    }
+
+    .navbar-mobile a:hover {
+        background-color: #bef606;
+        border-radius: 5px;
+    }
+
+    /* Classe pour afficher le menu mobile lorsque l'icône hamburger est cliqué */
+    .navbar-mobile.active {
+        display: flex;
+    }
+}

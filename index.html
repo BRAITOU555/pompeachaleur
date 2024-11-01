@@ -25,6 +25,18 @@
             <a href="tel:0767514375" class="call-button">07 67 51 43 75</a>
         </div>
     </header>
+<!-- Bouton Hamburger pour mobile -->
+<div class="hamburger" onclick="toggleMenu()">☰ Menu</div>
+
+<!-- Menu de navigation pour mobile -->
+<ul class="navbar-mobile">
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#climatisation">Climatisation réversible</a></li>
+    <li><a href="#pompe-a-chaleur">Pompes à chaleur</a></li>
+    <li><a href="#ballon-thermo">Ballon thermodynamique</a></li>
+    <li><a href="#depannage">Dépannage de pompe à chaleur</a></li>
+    <li><a href="#depannageclim">Dépannage climatisation</a></li>
+</ul>
 
     <!-- Menu de navigation pour les différentes sections du site -->
     <nav>
@@ -181,3 +193,10 @@
     </footer>
 </body>
 </html>
+<script>
+    function toggleMenu() {
+        const navbarMobile = document.querySelector('.navbar-mobile');
+        navbarMobile.classList.toggle('active');
+    }
+    </script>
+    
