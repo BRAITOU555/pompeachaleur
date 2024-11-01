@@ -1,0 +1,300 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* En-tête du logo */
+.header-logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    width: 100%;
+}
+
+.logo-text {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.8rem;
+    color: #ea0707;
+    margin: 0;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.logo-initials {
+    background: linear-gradient(45deg, #004080, #e60000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.logo-subtext {
+    font-size: 0.8rem;
+    color: #333;
+    font-weight: normal;
+    display: block;
+    text-align: center;
+    margin-top: 2px;
+}
+
+/* Menu de navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar li a {
+    color: rgb(5, 49, 248);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.navbar li a:hover {
+    background-color: #bef606;
+    border-radius: 5px;
+}
+
+/* En-tête d'information */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f7f9;
+    color: rgb(239, 5, 5);
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.contact-info p {
+    margin: 0;
+}
+
+.header-button .call-button {
+    background-color: #e60000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Section principale (Hero) */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fdfeff;
+    width: 100%;
+}
+
+.hero h1 {
+    color: #004080;
+}
+
+.btn-contact {
+    background-color: #e60000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Section des services */
+.services {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-item h3 {
+    color: #004080;
+}
+
+.service-item p {
+    color: #666;
+}
+
+/* Section "Notre Processus" */
+.our-process {
+    padding: 40px 20px;
+    text-align: left; /* Aligne le texte à gauche */
+    background-color: #f5f5f5; /* Couleur de fond gris clair */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+.our-process h2 {
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.our-process .subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.process-content {
+    display: flex; /* Utilisation de flex pour le layout */
+    align-items: flex-start; /* Aligne les éléments en haut */
+    justify-content: flex-start; /* Aligne les éléments à gauche */
+    gap: 20px;
+}
+
+.process-image {
+    flex: 0 0 40%; /* L'image occupe 40% de la largeur */
+}
+
+.process-image img {
+    width: 90%; /* L'image occupe toute la largeur de son conteneur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.process-steps {
+    flex: 1; /* Le texte occupe tout l'espace restant */
+    max-width: 60%; /* Largeur maximale pour le texte */
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Espacement entre les étapes */
+}
+
+.step-icon {
+    font-size: 2rem; /* Taille de l'icône */
+    color: #e60000; /* Couleur de l'icône */
+    margin-right: 15px; /* Espacement à droite de l'icône */
+}
+
+.step h3 {
+    font-size: 1.4rem; /* Taille du titre */
+    color: #004080; /* Couleur du titre */
+    margin: 0;
+}
+
+.step p {
+    color: #333; /* Couleur du texte */
+    margin: 5px 0 0 0; /* Espacement pour le texte */
+}
+
+.btn-quote {
+    display: inline-block; /* Affichage en bloc */
+    background-color: #e60000; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Pas de soulignement */
+    font-weight: bold; /* Texte en gras */
+    margin-top: 20px; /* Espacement au-dessus */
+}
+
+.btn-quote:hover {
+    background-color: #b30000; /* Couleur de fond au survol */
+}
+
+/* Section FAQ et autres sections */
+.faq-section, .footer {
+    max-width: 100%;
+    margin: 0;
+}
+
+.faq-section h2, .footer-section h3 {
+    color: #004080;
+}
+
+.faq-item h3 {
+    color: #e60000;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.faq-item p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Bas de page (Footer) */
+.footer {
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-section {
+    width: 30%;
+    padding: 10px;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    color: #f4f4f4;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #cccccc;
+}
