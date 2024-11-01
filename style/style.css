@@ -149,9 +149,9 @@ header {
 /* Section "Notre Processus" */
 .our-process {
     padding: 40px 20px;
-    text-align: left; /* Aligne le texte à gauche */
-    background-color: #f5f5f5; /* Couleur de fond gris clair */
-    border-radius: 10px; /* Coins arrondis */
+    text-align: left;
+    background-color: #f5f5f5;
+    border-radius: 10px;
 }
 
 .our-process h2 {
@@ -167,63 +167,63 @@ header {
 }
 
 .process-content {
-    display: flex; /* Utilisation de flex pour le layout */
-    align-items: flex-start; /* Aligne les éléments en haut */
-    justify-content: flex-start; /* Aligne les éléments à gauche */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 20px;
 }
 
 .process-image {
-    flex: 0 0 40%; /* L'image occupe 40% de la largeur */
+    flex: 0 0 40%;
 }
 
 .process-image img {
-    width: 90%; /* L'image occupe toute la largeur de son conteneur */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .process-steps {
-    flex: 1; /* Le texte occupe tout l'espace restant */
-    max-width: 60%; /* Largeur maximale pour le texte */
+    flex: 1;
+    max-width: 60%;
 }
 
 .step {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Espacement entre les étapes */
+    margin-bottom: 20px;
 }
 
 .step-icon {
-    font-size: 2rem; /* Taille de l'icône */
-    color: #e60000; /* Couleur de l'icône */
-    margin-right: 15px; /* Espacement à droite de l'icône */
+    font-size: 2rem;
+    color: #e60000;
+    margin-right: 15px;
 }
 
 .step h3 {
-    font-size: 1.4rem; /* Taille du titre */
-    color: #004080; /* Couleur du titre */
+    font-size: 1.4rem;
+    color: #004080;
     margin: 0;
 }
 
 .step p {
-    color: #333; /* Couleur du texte */
-    margin: 5px 0 0 0; /* Espacement pour le texte */
+    color: #333;
+    margin: 5px 0 0;
 }
 
 .btn-quote {
-    display: inline-block; /* Affichage en bloc */
-    background-color: #e60000; /* Couleur de fond */
-    color: white; /* Couleur du texte */
-    padding: 10px 20px; /* Espacement interne */
-    border-radius: 5px; /* Coins arrondis */
-    text-decoration: none; /* Pas de soulignement */
-    font-weight: bold; /* Texte en gras */
-    margin-top: 20px; /* Espacement au-dessus */
+    display: inline-block;
+    background-color: #e60000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .btn-quote:hover {
-    background-color: #b30000; /* Couleur de fond au survol */
+    background-color: #b30000;
 }
 
 /* Section FAQ et autres sections */
@@ -298,6 +298,7 @@ header {
     font-size: 0.8rem;
     color: #cccccc;
 }
+
 /* Styles pour le menu hamburger sur les petits écrans */
 @media (max-width: 768px) {
     /* Cache la barre de navigation normale */
@@ -320,7 +321,7 @@ header {
         flex-direction: column;
         background-color: #ffffff;
         position: absolute;
-        top: 60px; /* Ajustez pour éviter le chevauchement avec l'en-tête */
+        top: 60px;
         width: 100%;
         padding: 10px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
