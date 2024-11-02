@@ -12,9 +12,109 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(249, 249, 249, 0.1);
+    width: 100%;
+}
+/* Fige l'en-tête en haut de la page */
+.header-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Assure que l'en-tête reste au-dessus du contenu */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(233, 231, 231, 0.1);
+    width: 100%;
+}
+
+/* Décale le contenu principal pour éviter qu'il ne soit caché sous l'en-tête */
+main {
+    padding-top: 80px; /* Ajustez la valeur selon la hauteur de l'en-tête */
+}
+
+/* Fige le menu en dessous de l'en-tête */
+.navbar {
+    position: fixed;
+    top: 60px; /* Ajustez selon la hauteur de l'en-tête */
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
     background-color: #f4f4f4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
+}
+
+/* Décale le contenu principal pour inclure l'espace du menu */
+.services, .our-process, .faq-section, .footer {
+    margin-top: 50px; /* Ajustez cette valeur selon la hauteur du menu */
+}
+
+/* Bouton téléphone pour la version mobile */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Cache le menu pour les écrans de mobile */
+    }
+
+    .hamburger {
+        display: block; /* Affiche le menu hamburger pour mobile */
+        position: fixed;
+        top: 60px; /* Ajustez selon la hauteur de l'en-tête */
+        left: 20px;
+        z-index: 1001;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 10px;
+        color: #004080;
+        background-color: #f4f4f4;
+        border: none;
+        text-align: left;
+    }
+
+    /* Affichage du menu déroulant */
+    .navbar-mobile {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        padding: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-mobile li {
+        margin: 10px 0;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navbar-mobile a {
+        color: #004080;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .navbar-mobile a:hover {
+        background-color: #bef606;
+        color: #004080;
+        border-radius: 5px;
+    }
+
+    /* Icône de téléphone rouge dans la version mobile */
+    .call-button::before {
+        content: "📞 "; /* Ajoute l'icône de téléphone */
+        color: #e60000;
+    }
 }
 
 .logo-text {
