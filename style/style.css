@@ -579,10 +579,28 @@ body {
         margin-right: 10px;
     }
 
+    /* Icône téléphone avant le numéro */
     .call-button::before {
-        content: "📞 "; /* Icône de téléphone pour mobile */
+        content: "📞 ";
         color: #e60000;
         font-size: 1.2rem;
         margin-right: 5px;
+    }
+
+    /* Icône hamburger sans texte "Menu" */
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 10px;
+        color: #004080;
+        background-color: #f4f4f4;
+        border: none;
+        text-align: center;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 }
