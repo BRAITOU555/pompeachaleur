@@ -10,8 +10,10 @@ body {
 .header-logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
     background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
 
@@ -41,53 +43,124 @@ body {
     margin-top: 2px;
 }
 
-/* Menu de navigation */
-.navbar {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 10px;
-    background-color: #ffffff;
-    width: 100%;
-}
-
-.navbar li {
-    margin: 0 15px;
-}
-
-.navbar li a {
-    color: rgb(5, 49, 248);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-}
-
-.navbar li a:hover {
-    background-color: #bef606;
-    border-radius: 5px;
-}
-
-/* En-tête d'information */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f5f7f9;
-    color: rgb(239, 5, 5);
-    padding: 10px 20px;
-    width: 100%;
-}
-
 .contact-info p {
     margin: 0;
 }
 
-.header-button .call-button {
+.header-button {
+    margin-left: auto;
+    margin-right: 25px; /* Ajoutez cette ligne pour le rapprocher du centre */
+}
+
+.call-button {
     background-color: #e60000;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+/* Menu de navigation pour version ordinateur */
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar li a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.navbar li a:hover {
+    background-color: #bef606;
+    color: #004080;
+    border-radius: 5px;
+}
+
+/* Styles pour mobile */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: #004080;
+    background-color: #f4f4f4;
+    border: none;
+    text-align: left;
+}
+
+/* Affichage du menu déroulant pour mobile */
+.navbar-mobile {
+    display: none;
+    flex-direction: column;
+    background-color: #ffffff;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-mobile li {
+    margin: 10px 0;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-mobile a {
+    color: #004080;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-mobile a:hover {
+    background-color: #bef606;
+    color: #004080;
+    border-radius: 5px;
+}
+
+/* Affiche le menu hamburger et masque le menu de navigation sur les petits écrans */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Cache le menu pour les écrans de mobile */
+    }
+
+    .hamburger {
+        display: block; /* Affiche le menu hamburger pour mobile */
+    }
+
+    .navbar-mobile.active {
+        display: flex; /* Affiche le menu mobile lorsque le hamburger est cliqué */
+    }
+
+    /* Agrandissement des boîtes de services uniquement en version mobile */
+    .service-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Section principale (Hero) */
@@ -108,6 +181,15 @@ header {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+}
+
+    background-color: #e60000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 /* Section des services */
@@ -148,82 +230,76 @@ header {
 
 /* Section "Notre Processus" */
 .our-process {
-    padding: 40px 20px;
-    text-align: left;
+    padding: 30px 20px;
     background-color: #f5f5f5;
     border-radius: 10px;
-}
-
-.our-process h2 {
-    font-size: 2rem;
-    color: #004080;
-    margin-bottom: 10px;
-}
-
-.our-process .subtitle {
-    color: #666;
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    text-align: left;
 }
 
 .process-content {
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
 .process-image {
-    flex: 0 0 40%;
+    flex: 0 0 40%; /* Augmente la largeur de l'image à 40% */
+    max-width: 400px; /* Limite la largeur maximale de l'image */
 }
 
 .process-image img {
-    width: 90%;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.process-steps {
-    flex: 1;
-    max-width: 60%;
-}
 
 .step {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    gap: 15px;
 }
 
 .step-icon {
-    font-size: 2rem;
-    color: #e60000;
-    margin-right: 15px;
+    font-size: 1.8rem; /* Taille de l'icône pour bien l'afficher */
+    color: #333366;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
 }
 
 .step h3 {
-    font-size: 1.4rem;
-    color: #004080;
+    font-size: 1.1rem;
+    color: #333366;
+    font-weight: bold;
     margin: 0;
 }
 
 .step p {
-    color: #333;
+    font-size: 0.9rem;
+    color: #666;
     margin: 5px 0 0;
 }
 
 .btn-quote {
-    display: inline-block;
     background-color: #e60000;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.9rem;
+    align-self: flex-start;
     margin-top: 20px;
-}
-
-.btn-quote:hover {
-    background-color: #b30000;
 }
 
 /* Section FAQ et autres sections */
@@ -313,6 +389,9 @@ header {
         cursor: pointer;
         padding: 10px 20px;
         color: #004080;
+        background-color: #f4f4f4;
+        border: none;
+        text-align: left;
     }
 
     /* Affichage du menu déroulant */
@@ -330,15 +409,19 @@ header {
     .navbar-mobile li {
         margin: 10px 0;
         text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
     }
 
     .navbar-mobile a {
-        color: rgb(5, 49, 248);
+        color: #004080;
         font-weight: bold;
+        text-decoration: none;
     }
 
     .navbar-mobile a:hover {
         background-color: #bef606;
+        color: #004080;
         border-radius: 5px;
     }
 
@@ -346,4 +429,35 @@ header {
     .navbar-mobile.active {
         display: flex;
     }
+
+    /* Agrandissement des boîtes de services uniquement en version mobile */
+    .service-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+/* Empêche le débordement horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* Assure que tous les éléments de la page restent dans la largeur de l'écran */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+/* Ajustement des sections principales */
+.header-logo, .navbar, .hero, .services, .our-process, .faq-section, .footer {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
