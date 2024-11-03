@@ -1,0 +1,110 @@
+/* Variables pour le dégradé du logo */
+:root {
+    --logo-gradient-start: #0e7eef; /* Couleur de début */
+    --logo-gradient-end: #e60000; /* Couleur de fin */
+}
+
+/* Style général pour l'en-tête */
+.main-header {
+    background-color: #eeeeee;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fige l'en-tête */
+    top: 0; /* Positionne l'en-tête en haut de la page */
+    left: 0; /* Aligne l'en-tête à gauche */
+    right: 0; /* Aligne l'en-tête à droite */
+    z-index: 1000; /* S'assure que l'en-tête reste au-dessus du contenu */
+}
+
+/* Décale le contenu principal pour éviter qu'il ne soit caché sous l'en-tête */
+body {
+    padding-top: 150px; /* Ajustez cette valeur selon la hauteur de l'en-tête */
+}
+
+/* Logo avec dégradé et police Impact */
+.logo-text {
+    font-family: Impact, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-subtext {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Style pour le menu de navigation horizontal */
+.navbar-horizontal {
+    position: fixed; /* Fige le menu */
+    top: 80px; /* Positionne le menu juste en dessous de l'en-tête (ajustez selon la hauteur de l'en-tête) */
+    left: 0; /* Aligne le menu à gauche */
+    right: 0; /* Aligne le menu à droite */
+    background-color: #ffffff; /* Assurez-vous que le fond du menu est blanc */
+    padding: 10px 0; /* Espacement autour du menu */
+    border-bottom: 2px solid #e0e0e0; /* Bordure inférieure pour le menu */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour le menu */
+    z-index: 999; /* S'assure que le menu est au-dessus du contenu */
+}
+
+.navbar-horizontal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacement entre les éléments du menu */
+}
+
+.navbar-horizontal ul li {
+    display: inline;
+}
+
+.navbar-horizontal ul li a {
+    text-decoration: none;
+    color: #004080; /* Bleu foncé pour le texte */
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Espacement entre l'icône et le texte */
+    transition: color 0.3s ease;
+}
+
+.navbar-horizontal ul li a:hover {
+    color: #e60000; /* Rouge au survol */
+}
+
+/* Couleurs spécifiques pour les icônes */
+.icon-home {
+    color: #004080;
+}
+
+.icon-climatisation {
+    color: #00bcd4;
+}
+
+.icon-pompe {
+    color: #ff5722;
+}
+
+.icon-ballon {
+    color: #3f51b5;
+}
+
+.icon-depannage-pompe {
+    color: #ff9800;
+}
+
+.icon-depannage-clim {
+    color: #9c27b0;
+}
+
+.icon-entretien {
+    color: #4caf50; /* Vert pour représenter l'entretien */
+}
