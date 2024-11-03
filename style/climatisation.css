@@ -1,178 +1,7 @@
 /* Variables pour le dégradé du logo */
 :root {
-    --logo-gradient-start: #0e7eef; /* Couleur de début */
-    --logo-gradient-end: #e60000; /* Couleur de fin */
-}
-
-/* Style général pour l'en-tête */
-.main-header {
-    background-color: #eeeeee;
-    padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Logo avec dégradé et police Impact */
-.logo-text {
-    font-family: Impact, sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1;
-    margin: 0;
-    background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.logo-subtext {
-    font-size: 0.9rem;
-    color: #333;
-}
-
-/* Style pour le menu de navigation horizontal */
-.navbar-horizontal {
-    background-color: #ffffff;
-    padding: 10px 0;
-    border-bottom: 2px solid #e0e0e0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.navbar-horizontal ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.navbar-horizontal ul li {
-    display: inline;
-}
-
-.navbar-horizontal ul li a {
-    text-decoration: none;
-    color: #004080; /* Bleu foncé pour le texte */
-    font-weight: bold;
-    font-size: 1rem;
-    padding: 10px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px; /* Espacement entre l'icône et le texte */
-    transition: color 0.3s ease;
-}
-
-.navbar-horizontal ul li a:hover {
-    color: #e60000; /* Rouge au survol */
-}
-
-/* Couleurs spécifiques pour les icônes */
-.icon-home {
-    color: #004080;
-}
-
-.icon-climatisation {
-    color: #00bcd4;
-}
-
-.icon-pompe {
-    color: #ff5722;
-}
-
-.icon-ballon {
-    color: #3f51b5;
-}
-
-.icon-depannage-pompe {
-    color: #ff9800;
-}
-
-.icon-depannage-clim {
-    color: #9c27b0;
-}
-
-.icon-entretien {
-    color: #4caf50; /* Vert pour représenter l'entretien */
-}
-
-/* Style pour la bande avec image et texte */
-.image-text-band {
-    background-color: #5063c9; /* Bleu clair pour le fond */
-    padding: 20px;
-    border-radius: 20px; /* Arrondir les coins */
-    margin: 20px auto;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.section-title {
-    font-family: 'Arial Black', sans-serif;
-    font-size: 2rem;
-    color: #ffffff;
-    margin-bottom: 10px; /* Espace en dessous du titre */
-}
-
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1100px;
-    padding: 0 10px; /* Réduire l'espacement latéral */
-}
-
-.band-image {
-    width: 90%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.text-content {
-    color: #ffffff;
-    max-width: 600px;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    text-align: left;
-    padding: 0 15px;
-}
-
-.text-content p {
-    margin-bottom: 8px;
-}
-
-/* Disposition en deux colonnes sur les écrans larges */
-@media (min-width: 768px) {
-    .content-container {
-        flex-direction: row; /* Disposition en ligne pour desktop */
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-
-    .band-image {
-        margin-right: 15px;
-    }
-
-    .text-content {
-        max-width: 50%;
-    }
-
-    /* Variables pour le dégradé du logo */
-:root {
-    --logo-gradient-start: #0e7eef; /* Couleur de début */
-    --logo-gradient-end: #e60000; /* Couleur de fin */
+    --logo-gradient-start: #0e7eef;
+    --logo-gradient-end: #e60000;
 }
 
 /* Style général pour l'en-tête */
@@ -209,7 +38,7 @@
     text-decoration: none;
 }
 
-/* Menu de navigation horizontal (bureau uniquement) */
+/* Menu de navigation horizontal pour bureau */
 .navbar-horizontal {
     background-color: #ffffff;
     padding: 10px 0;
@@ -243,12 +72,43 @@
     color: #e60000;
 }
 
-/* Icône du menu hamburger (mobile uniquement) */
-.hamburger-menu {
-    display: none;
+/* Couleurs spécifiques pour les icônes */
+.icon-home {
+    color: #004080;
 }
 
-/* Styles pour le menu latéral (mobile uniquement) */
+.icon-climatisation {
+    color: #00bcd4;
+}
+
+.icon-pompe {
+    color: #ff5722;
+}
+
+.icon-ballon {
+    color: #3f51b5;
+}
+
+.icon-depannage-pompe {
+    color: #ff9800;
+}
+
+.icon-depannage-clim {
+    color: #9c27b0;
+}
+
+.icon-entretien {
+    color: #4caf50;
+}
+
+/* Menu hamburger pour mobile */
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Menu latéral pour mobile */
 .side-menu {
     height: 100%;
     width: 0;
@@ -341,7 +201,7 @@
     text-align: left;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments pour mobile */
 @media (max-width: 768px) {
     /* Afficher le menu hamburger sur mobile */
     .hamburger-menu {
@@ -353,13 +213,10 @@
         display: none;
     }
 
-    /* Bande et disposition du contenu */
+    /* Disposition de la bande en ligne pour desktop */
     .content-container {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
-        text-align: left;
     }
-}
-
 }

@@ -13,7 +13,7 @@
     <!-- En-tête avec logo et contact -->
     <header class="main-header">
         <div class="header-container">
-            <!-- Icône du menu hamburger pour mobile -->
+            <!-- Icône du menu hamburger pour mobile uniquement -->
             <div class="hamburger-menu" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -30,7 +30,7 @@
         </div>
     </header>
 
-    <!-- Menu de navigation horizontal pour bureau -->
+    <!-- Menu de navigation horizontal pour bureau uniquement -->
     <nav class="navbar-horizontal">
         <ul>
             <li><a href="../index.html"><i class="fas fa-home icon-home"></i> Accueil</a></li>
@@ -47,13 +47,13 @@
     <nav id="side-menu" class="side-menu">
         <div class="close-btn" onclick="toggleMenu()">&times;</div>
         <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="../pages/climatisation.html">Climatisation réversible</a></li>
-            <li><a href="../pages/pompe-a-chaleur.html">Pompes à chaleur</a></li>
-            <li><a href="../pages/ballon-thermo.html">Ballon thermodynamique</a></li>
-            <li><a href="../pages/depannage.html">Dépannage de pompe à chaleur</a></li>
-            <li><a href="../pages/depannageclim.html">Dépannage climatisation</a></li>
-            <li><a href="../pages/entretien.html">Entretien</a></li>
+            <li><a href="../index.html" onclick="toggleMenu()">Accueil</a></li>
+            <li><a href="../pages/climatisation.html" onclick="toggleMenu()">Climatisation réversible</a></li>
+            <li><a href="../pages/pompe-a-chaleur.html" onclick="toggleMenu()">Pompes à chaleur</a></li>
+            <li><a href="../pages/ballon-thermo.html" onclick="toggleMenu()">Ballon thermodynamique</a></li>
+            <li><a href="../pages/depannage.html" onclick="toggleMenu()">Dépannage de pompe à chaleur</a></li>
+            <li><a href="../pages/depannageclim.html" onclick="toggleMenu()">Dépannage climatisation</a></li>
+            <li><a href="../pages/entretien.html" onclick="toggleMenu()">Entretien</a></li>
         </ul>
     </nav>
 
