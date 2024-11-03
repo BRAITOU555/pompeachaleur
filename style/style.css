@@ -604,71 +604,85 @@ body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    @media (max-width: 768px) {
-        /* Réorganisation de l'en-tête */
-        .header-logo {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    
-        /* Positionne "FCE" au centre */
-        .logo-text {
-            font-size: 1.5rem;
-            margin: 0 auto;
-            text-align: center;
-            font-weight: bold;
-            color: #ea0707;
-        }
-    
-        /* Positionne le numéro de téléphone à droite */
-        .contact-info {
-            font-size: 0.9rem;
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            color: #004080;
-        }
-    
-        /* Positionne le menu hamburger à gauche */
-        .hamburger {
-            display: block;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 10px;
-            color: #004080;
-            background-color: transparent;
-            border: none;
-        }
-    
-        /* Styles pour le menu latéral */
-        .navbar-mobile {
-            display: none; /* Masque le menu par défaut */
-            flex-direction: column;
-            background-color: #ffffff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100vh;
-            width: 250px;
-            padding: 20px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1001;
-            overflow-y: auto;
-        }
-    
-        /* Affiche le menu latéral lorsque la classe "active" est ajoutée */
-        .navbar-mobile.active {
-            display: flex;
-        }
-    
-        /* Bouton de fermeture en haut à droite du menu latéral */
-        .navbar-mobile .close-btn {
-            align-self: flex-end;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #004080;
-        }
+    /* ---- Début de la section mobile modifiée ---- */
+
+@media (max-width: 768px) {
+    /* Réorganise l'en-tête pour mobile */
+    .header-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-    
+
+    /* Positionne le menu hamburger à gauche */
+    .hamburger {
+        order: 1;
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0; /* Supprime le padding pour éviter un grand bouton */
+        color: #004080;
+        background-color: transparent; /* Supprime le fond rond */
+        border: none; /* Supprime la bordure */
+        margin-right: auto; /* Place le hamburger à gauche */
+    }
+
+    /* Positionne "FCE" au centre */
+    .logo-text {
+        order: 2;
+        font-size: 1.5rem;
+        text-align: center;
+        color: #ea0707;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+
+    /* Positionne le numéro de téléphone à droite */
+    .contact-info {
+        order: 3;
+        font-size: 0.9rem;
+        color: #004080;
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* Place le numéro à droite */
+    }
+
+    /* Styles pour le menu latéral */
+    .navbar-mobile {
+        display: none; /* Masque le menu par défaut */
+        flex-direction: column;
+        background-color: #ffffff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 250px;
+        padding: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        overflow-y: auto;
+    }
+
+    /* Affiche le menu latéral lorsque la classe "active" est ajoutée */
+    .navbar-mobile.active {
+        display: flex;
+    }
+
+    /* Bouton de fermeture en haut à droite du menu latéral */
+    .navbar-mobile .close-btn {
+        align-self: flex-end;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #004080;
+    }
+
+    /* Icône téléphone avant le numéro */
+    .call-button::before {
+        content: "📞 ";
+        color: #e60000;
+        font-size: 1.2rem;
+        margin-right: 5px;
+    }
 }
+
+/* ---- Fin de la section mobile modifiée ---- */
