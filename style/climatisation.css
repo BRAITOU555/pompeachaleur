@@ -103,91 +103,54 @@
     color: #4caf50; /* Vert pour représenter l'entretien */
 }
 
-.image-text-band {
-    width: 100%;
-    padding: 20px;
-    background-color: #f5f5f5; /* Couleur de fond de la bande */
-    text-align: center; /* Centrer le texte */
-}
-
-.section-title {
-    font-family: 'Arial Black', sans-serif; /* Choisir une belle police */
-    font-size: 2rem; /* Taille du titre */
-    color: #004080; /* Couleur du titre */
-    margin-bottom: 20px; /* Espace en dessous du titre */
-}
-
-.content-container {
-    display: flex;
-    justify-content: center; /* Centrer le contenu */
-    align-items: flex-start; /* Aligner le contenu en haut */
-}
-
-.band-image {
-    width: 300px; /* Largeur de l'image */
-    height: auto; /* Hauteur automatique pour garder les proportions */
-    margin-right: 20px; /* Espace entre l'image et le texte */
-    border-radius: 10px; /* Coins arrondis pour l'image */
-}
-
-.text-content {
-    text-align: left; /* Alignement à gauche pour le texte */
-    max-width: 600px; /* Largeur maximum du texte */
-    color: #333; /* Couleur du texte */
-    font-size: 1rem; /* Taille de la police du texte */
-    line-height: 1.6; /* Hauteur de ligne pour aérer le texte */
-}
-
-/* Style de la section avec image et texte */
+/* Style pour la bande avec image et texte */
 .image-text-band {
     background-color: #5063c9; /* Bleu clair pour le fond */
-    padding: 20px 20px; /* Réduire la marge interne pour réduire la hauteur */
+    padding: 20px;
     border-radius: 20px; /* Arrondir les coins */
     margin: 20px auto;
-    max-width: 100%; /* Élargir la bande sur toute la longueur */
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    position: relative;
-    overflow: hidden;
 }
 
 .section-title {
-    color: #ffffff;
+    font-family: 'Arial Black', sans-serif;
     font-size: 2rem;
-    margin-bottom: 0.5rem; /* Réduire l’espacement en dessous du titre */
+    color: #ffffff;
+    margin-bottom: 10px; /* Espace en dessous du titre */
 }
 
 .content-container {
     display: flex;
-    flex-direction: column; /* Colonne par défaut pour mobile */
+    flex-direction: column;
     align-items: center;
     max-width: 1100px;
     padding: 0 10px; /* Réduire l'espacement latéral */
 }
 
-/* Réduire légèrement l'image */
 .band-image {
     width: 90%;
-    max-width: 300px; /* Légèrement plus petite */
+    max-width: 300px;
     height: auto;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Texte plus grand et compressé */
 .text-content {
     color: #ffffff;
     max-width: 600px;
-    font-size: 1.1rem; /* Agrandir le texte */
+    font-size: 1.1rem;
     line-height: 1.4;
     text-align: left;
+    padding: 0 15px;
 }
 
 .text-content p {
-    margin-bottom: 8px; /* Réduire davantage l'espacement entre paragraphes */
+    margin-bottom: 8px;
 }
 
 /* Disposition en deux colonnes sur les écrans larges */
@@ -196,16 +159,207 @@
         flex-direction: row; /* Disposition en ligne pour desktop */
         align-items: flex-start;
         justify-content: space-between;
-        text-align: left;
     }
 
     .band-image {
-        margin-right: 15px; /* Réduire l’espace à droite de l'image */
-        margin-bottom: 0;
+        margin-right: 15px;
     }
 
     .text-content {
-        max-width: 50%; /* Plus d’espace pour le texte */
-        padding: 0 10px; /* Réduire la marge interne */
+        max-width: 50%;
     }
+
+    /* Variables pour le dégradé du logo */
+:root {
+    --logo-gradient-start: #0e7eef; /* Couleur de début */
+    --logo-gradient-end: #e60000; /* Couleur de fin */
+}
+
+/* Style général pour l'en-tête */
+.main-header {
+    background-color: #eeeeee;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo avec dégradé et police Impact */
+.logo-text {
+    font-family: Impact, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    margin: 0;
+    background: linear-gradient(45deg, var(--logo-gradient-start), var(--logo-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Icône de téléphone à droite */
+.call-button {
+    color: #007bff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Menu de navigation horizontal (bureau uniquement) */
+.navbar-horizontal {
+    background-color: #ffffff;
+    padding: 10px 0;
+    border-bottom: 2px solid #e0e0e0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.navbar-horizontal ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar-horizontal ul li a {
+    text-decoration: none;
+    color: #004080;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.navbar-horizontal ul li a:hover {
+    color: #e60000;
+}
+
+/* Icône du menu hamburger (mobile uniquement) */
+.hamburger-menu {
+    display: none;
+}
+
+/* Styles pour le menu latéral (mobile uniquement) */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.side-menu.open {
+    width: 250px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    padding: 15px 20px;
+}
+
+.side-menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.side-menu a:hover {
+    color: #e60000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Bande avec image et texte */
+.image-text-band {
+    background-color: #5063c9;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    padding: 0 10px;
+}
+
+.band-image {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.text-content {
+    color: #ffffff;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Afficher le menu hamburger sur mobile */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Cacher le menu de navigation horizontal sur mobile */
+    .navbar-horizontal {
+        display: none;
+    }
+
+    /* Bande et disposition du contenu */
+    .content-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
 }
